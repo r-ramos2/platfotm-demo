@@ -1,0 +1,12 @@
+alertmanager:
+  enabled: false
+pushgateway:
+  enabled: false
+server:
+  global:
+    scrape_interval: 15s
+  service:
+    type: ClusterIP
+  resources:
+    requests: { cpu: "100m", memory: "128Mi" }
+    limits:   { cpu: "200m", memory: "256Mi" }
